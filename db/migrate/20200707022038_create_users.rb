@@ -4,10 +4,11 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :password
       t.string :email
-      t.boolean :sex
+      t.integer :sex
       t.date :birthday
-      t.integer :phone
+      t.string :phone
       t.string :address
+      t.integer :kind
 
       t.timestamps
     end
