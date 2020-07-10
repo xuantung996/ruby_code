@@ -1,2 +1,92 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+// @import "font-awesome";
+// @import font-awesome;
+
+.show_list th, td {
+  border: 1px solid #000000;
+}
+// -------------------------------------
+// .item_nav a {
+//   font-size: 20px;
+//   text-transform: uppercase;
+// }
+.nav li a{
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #333;
+}
+// ----------slide------------------
+
+.introduce {
+  background-image: url(img-10.jpg);
+  height: 340px;
+  color: #fff;
+}
+
+.content_left h3{
+  font-weight: 600;
+}
+
+.introduce {
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+.introduce h1 {
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 50px;
+}
+
+.introduce a{
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+// ---------content_left--------------
+
+.time_leanr {
+  padding-top: 20px;
+}
+
+.course_item{
+  padding: 20px 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: #8D191B;
+}
+
+.course_item a{
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#footer{
+  background: #222222;
+  height: 300px;
+}
+
+.content_footer{
+  padding-top: 30px;
+  color: #fff;
+}
+
+.content_footer p{
+  padding-top: 10px;
+}
+.content_footer a{
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+.contact li a{
+  margin-top: 20px;
+  margin-left: 0;
+}
+ul,li {list-style: none}

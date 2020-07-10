@@ -1,16 +1,102 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+<div class="header_nav">
+  <nav class="navbar navbar-defauld">
+    <div class="container">
+      <div class="navbar-header">
+        <%= image_tag("logo-new.png", size: "60") %>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Giới Thiệu", class: "item_nav" %></li>
+        <li><%= link_to "Các Khóa Học", class: "item_nav" %></li>
+        <li><%= link_to "Tài Liệu", class: "item_nav" %></li>
+        <li><%= link_to "Tin Tức", class: "item_nav" %></li>
+        <li><%= link_to "Học Viên", class: "item_nav" %></li>
+        <li><%= link_to "Liên Hệ", class: "item_nav" %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Sign Up", new_user_session_path %></li>
+        <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Sign Up", new_user_session_path %></li>
-      <li><%= link_to "Sign Out", destroy_user_session_path %></li>
-    </ul>
+  </nav>
+</div>
+<div class="container-fuild">
+  <div class="introduce text-center">
+    <h1>CÁC KHÓA HỌC ATHENA</h1>
+    <%= link_to "Trang Chu" %> / <%= link_to "Cac Lop Hoc" %>
   </div>
-</nav>
+</div>
+<div class="container">
+  <div class="content">
+    <div class="content_left col-md-8">
+      <h3>KHÓA HỌC IELTS THẦN TỐC 0 - 5.5+</h3>
+      <div class="time_leanr">
+        <p style="color: red">Giảng viên: Tuanha</p>
+        <p style="color: red; margin-top: -10px">Thời lượng: 6 tháng</p>
+      </div>
+      <div class="port">
+        <small style="font-size: 14px; color: #444;"><i>Đây là khóa học IELTS cơ bản - nâng cao dành cho các bạn mất gốc, chưa có nền tảng về tiếng anh, phát âm chưa chuẩn, các kỹ năng và ngữ pháp còn yếu.</small></i>
+        <p style="font-size: 16px;">Là một trong những chứng chỉ đánh giá năng lực tiếng anh quan trọng, phổ biến và đáng tin cậy nhất trên thế giới, IELTS không chỉ tạo nên nền tảng vững chắc để bạn có thể tiến xa hơn trên con đường học tập và làm việc mà còn giúp bạn bước ra thế giới, chạm tới giấc mơ du học. Thậm chí là cả làm việc và định cư tại nước ngoài.<br>
+        Hiểu được điều đó, Anh Ngữ Athena đã nghiên cứu và xây dựng KHÓA HỌC IELTS THẦN TỐC 0 - 5.5+.</p>
+        <%= image_tag("khoa-hoc-ielts.jpg", size: "720x400") %>
+        <span style="font-size: 16px;">Khóa học này sẽ giúp các bạn củng cố kiến thức, làm quen với IELTS đồng thời nâng cao các kỹ năng một cách toàn diện hơn. Với lộ trình học tiêu chuẩn và phương pháp học độc đáo, chắc chắn bạn có thể đạt mục tiêu IELTS 5.5 và cao hơn nữa trong thời gian ngắn nhất. Cùng tìm hiểu khóa IELTS siêu tốc 0 - 5.5+ một cách chi tiết hơn ở bài viết này nhé!</span>
+      </div>
+    </div>
+    <div class="content_right col-md-4">
+      <div class="course">
+          <div class="course_item"><%= link_to "Khóa học TOEIC 0 - 500+ từ mất gốc" %></div>
+          <div class="course_item"><%= link_to "Khóa học TOEIC 4" %></div>
+          <div class="course_item"><%= link_to "Khóa học cap toc" %></div>
+          <div class="course_item"><%= link_to "Khóa học TOEIC 0 - 500+ từ mất gốc" %></div>
+      </div>
+      <div class="Reg_document">
+        <h2>Đăng ký nhận tài liệu</h2>
+        <div class="jumbotron">
+          <%= form_for :document do |f| %>
+          <div class="form-group">
+            <%= f.label :name %><br>
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :phone %><br>
+            <%= f.text_field :phone, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email %><br>
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+          <%= f.submit "Dang Ky Tai Lieu", class: "btn btn-primary"%>
+          <% end %>
+        </div>
+      </div>
+      <div class="image_en1">
+        <%= image_tag('img-15.png')%>
+      </div>
+      <div class="image_en2">
+        <%= image_tag('athena-banner.jpg')%>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">
+    <div class="content_footer col-md-3">
+      <%= image_tag("logo-new.png", size:"100") %>
+      <p>Trung tâm anh ngữ hàng đầu tại Hà Nội về việc đào tạo và luyện thi TOEIC, luyện thi đại học... cho người mất gốc.</p>
+    </div>
+    <div class="content_footer col-md-3">
+      <h4>THÔNG TIN LIÊN HỆ</h4>
+      <ul class="contact">
+        <li><%= link_to "Tầng F3, Số 187, Nguyễn Lương Bằng, Đống Đa, Hà Nội" %></li>
+        <li><%= link_to "0983 66 22 16 - 0983 66 22 18" %></li>
+        <li><%= link_to " athenacenter.vn@gmail.com" %></li>
+        <li><%= link_to " 08h30 - 12h00 và 14h00 - 22h00" %></li>
+      </ul>
+    </div>
+    <div class="content_footer col-md-3">
+      <h4>THÔNG TIN LIÊN HỆ</h4>
+    </div>
+    <div class="content_footer col-md-3">
+      <h4>THÔNG TIN LIÊN HỆ</h4>
+    </div>
+  </div>
+</div>
